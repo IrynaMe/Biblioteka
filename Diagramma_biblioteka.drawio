@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-22T09:21:08.519Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="TbtKKEiJZVdORc4ls52-" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-22T10:45:29.271Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="bSLymAtmgialrvi2hk3D" version="24.2.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1114" dy="1735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -37,12 +37,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="iOh9DdDHtPVlwgA_kX74-9" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iOh9DdDHtPVlwgA_kX74-6">
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-9" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.658;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iOh9DdDHtPVlwgA_kX74-6" target="iOh9DdDHtPVlwgA_kX74-36">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="483" y="250" as="sourcePoint" />
             <mxPoint x="490" y="310" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="490" y="240" />
+              <mxPoint x="470" y="240" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -92,7 +92,7 @@
           <mxGeometry x="360" y="-15" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-27" value="Cercare libro per il nome" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="600" y="80" width="120" height="40" as="geometry" />
+          <mxGeometry x="530" y="80" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="iOh9DdDHtPVlwgA_kX74-27">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -101,19 +101,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-30" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="600" y="180" width="120" height="40" as="geometry" />
+          <mxGeometry x="670" y="180" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="iOh9DdDHtPVlwgA_kX74-31" value="inserimento nome" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="630" y="180" width="60" height="30" as="geometry" />
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-31" value="inserimento id" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="710" y="190" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-32" value="Mostrare dati del libro" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="600" y="270" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="iOh9DdDHtPVlwgA_kX74-33" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iOh9DdDHtPVlwgA_kX74-27" target="iOh9DdDHtPVlwgA_kX74-31">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="220" as="sourcePoint" />
-            <mxPoint x="440" y="170" as="targetPoint" />
-          </mxGeometry>
+          <mxGeometry x="670" y="270" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iOh9DdDHtPVlwgA_kX74-30" target="iOh9DdDHtPVlwgA_kX74-32">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -125,13 +119,40 @@
           <mxGeometry x="230" y="310" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-36" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="420" y="310" width="120" height="60" as="geometry" />
+          <mxGeometry x="390" y="310" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-37" value="inserimento&amp;nbsp; titolo, autore" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="260" y="327.5" width="60" height="25" as="geometry" />
         </mxCell>
         <mxCell id="iOh9DdDHtPVlwgA_kX74-39" value="inserimento&amp;nbsp; titolo, autore, durata" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="450" y="327.5" width="60" height="25" as="geometry" />
+          <mxGeometry x="430" y="327.5" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-41" value="Cancellare un libro per id" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="670" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-42" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iOh9DdDHtPVlwgA_kX74-41" target="iOh9DdDHtPVlwgA_kX74-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="320" as="sourcePoint" />
+            <mxPoint x="440" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-44" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iOh9DdDHtPVlwgA_kX74-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="320" as="sourcePoint" />
+            <mxPoint x="590" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-45" value="inserimento nime" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="170" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-46" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.567;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="iOh9DdDHtPVlwgA_kX74-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="320" as="sourcePoint" />
+            <mxPoint x="590" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iOh9DdDHtPVlwgA_kX74-47" value="Mostrare dati del libro" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="530" y="270" width="120" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
