@@ -1,7 +1,7 @@
 package biblioteka;
 
+
 public class Book {
-    //private int ID;
     private String titolo;
     private String autore;
 
