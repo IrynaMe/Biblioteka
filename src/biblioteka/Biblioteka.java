@@ -6,9 +6,9 @@ import java.util.*;
 public class Biblioteka {
 
     private HashMap<Integer, Book> listaLibri = new HashMap<>();
-    private String nomefile = "E:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
+    //private String nomefile = "E:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
     //  private String nomefile = "D:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
-
+    private final String nomefile = "src\\biblioteka\\libriDisponibili.txt";
     public void menu() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Cosa vuoi fare: ");
@@ -50,7 +50,6 @@ public class Biblioteka {
         }
         sc.close();
     }
-
 
     //legge da file e popola HashMap
     public HashMap<Integer, Book> readFromFile() {
