@@ -44,7 +44,7 @@ public class Biblioteka {
                     break;
             }
         }
-        //sc.close();
+        sc.close();
     }
 
 
@@ -123,10 +123,10 @@ public class Biblioteka {
                     break;
                 default:
                     flag = false;
-                    menu();
+                    break;
             }
         }
-        menu();
+
     }
 
 
@@ -140,7 +140,6 @@ public class Biblioteka {
             //rescrivo il file
             aggiornaFile();
         }
-        menu();
     }
 
     public Integer trovaLibroPerId(int id) {
@@ -154,7 +153,6 @@ public class Biblioteka {
         }
         if (key == null) {
             System.out.println("Libro non è trovato");
-            menu();
         }
         return key;
     }
@@ -176,7 +174,6 @@ public class Biblioteka {
         } else {
             System.out.println("Libro non è trovato");
         }
-        menu();
     }
 
     public void aggiornaFile() {
