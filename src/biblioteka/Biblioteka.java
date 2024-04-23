@@ -20,28 +20,32 @@ public class Biblioteka {
             System.out.println("C -> Cancellare un libro ");
             System.out.println("N -> Cerca libro per nome/autore/parola chiave");
             System.out.println("Altro -> Uscire");
-            String scelta = sc.nextLine().toUpperCase();
-            switch (scelta) {
-                case "S":
-                    stampaValori();
-                    break;
-                case "A":
-                    aggiungereLibro();
-                    break;
-                case "C":
-                    System.out.println(" Inserisci ID del libro da cancellare: ");
-                    int id = Integer.parseInt(sc.nextLine());
-                    cancellaLibro(id);
-                    break;
-                case "N":
-                    System.out.println(" Inserisci il nome del libro opperue autore da cercare: ");
-                    String nome = sc.nextLine();
-                    trovaLibroPerNome(nome);
-                    break;
-                default:
-                    System.out.println("Arrivederci!");
-                    flag = false;
-                    break;
+            try {
+                String scelta = sc.nextLine().toUpperCase();
+                switch (scelta) {
+                    case "S":
+                        stampaValori();
+                        break;
+                    case "A":
+                        aggiungereLibro();
+                        break;
+                    case "C":
+                        System.out.println(" Inserisci ID del libro da cancellare: ");
+                        int id = Integer.parseInt(sc.nextLine());
+                        cancellaLibro(id);
+                        break;
+                    case "N":
+                        System.out.println(" Inserisci il nome del libro opperue autore da cercare: ");
+                        String nome = sc.nextLine();
+                        trovaLibroPerNome(nome);
+                        break;
+                    default:
+                        System.out.println("Arrivederci!");
+                        flag = false;
+                        break;
+                }
+            }catch (IllegalArgumentException e){
+                System.out.println("inserimento errato");
             }
         }
         sc.close();
