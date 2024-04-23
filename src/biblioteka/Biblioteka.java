@@ -48,7 +48,7 @@ public class Biblioteka {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Errore: inserisci un numero");
-                sc.next(); // Clear the buffer
+                sc.next();
             }
         }
         sc.close();
@@ -130,7 +130,7 @@ public class Biblioteka {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Errore: inserisci un numero");
-                sc.next(); // Clear the buffer
+                sc.next();
             }
         }
 
