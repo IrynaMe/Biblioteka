@@ -6,46 +6,49 @@ import java.util.*;
 public class Biblioteka {
 
     private HashMap<Integer, Book> listaLibri = new HashMap<>();
-    //private String nomefile = "E:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
-    //  private String nomefile = "D:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
     private final String nomefile = "src\\biblioteka\\libriDisponibili.txt";
+
     public void menu() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Cosa vuoi fare: ");
         boolean flag = true;
         while (flag) {
             System.out.println("------------------------------------");
-            System.out.println("S -> Stampa libri disponibili ");
-            System.out.println("A -> Aggiungere un nuovo libro ");
-            System.out.println("C -> Cancellare un libro ");
-            System.out.println("N -> Cerca libro per nome/autore/parola chiave");
-            System.out.println("Altro -> Uscire");
+            System.out.println("1 -> Stampa libri disponibili ");
+            System.out.println("2 -> Aggiungere un nuovo libro ");
+            System.out.println("3 -> Cancellare un libro ");
+            System.out.println("4 -> Cerca libro per nome/autore/parola chiave");
+            System.out.println("5 -> Uscire");
             try {
-                String scelta = sc.nextLine().toUpperCase();
+                int scelta = sc.nextInt();
                 switch (scelta) {
-                    case "S":
+                    case 1:
                         stampaValori();
                         break;
-                    case "A":
+                    case 2:
                         aggiungereLibro();
                         break;
-                    case "C":
-                        System.out.println(" Inserisci ID del libro da cancellare: ");
-                        int id = Integer.parseInt(sc.nextLine());
+                    case 3:
+                        System.out.println("Inserisci ID del libro da cancellare: ");
+                        int id = sc.nextInt();
                         cancellaLibro(id);
                         break;
-                    case "N":
-                        System.out.println(" Inserisci il nome del libro opperue autore da cercare: ");
-                        String nome = sc.nextLine();
+                    case 4:
+                        System.out.println("Inserisci il nome del libro oppure autore da cercare: ");
+                        String nome = sc.next();
                         trovaLibroPerNome(nome);
                         break;
-                    default:
+                    case 5:
                         System.out.println("Arrivederci!");
                         flag = false;
                         break;
+                    default:
+                        System.out.println("Scelta errata");
+                        break;
                 }
-            }catch (IllegalArgumentException e){
-                System.out.println("inserimento errato");
+            } catch (InputMismatchException e) {
+                System.out.println("Errore: inserisci un numero");
+                sc.next(); // Clear the buffer
             }
         }
         sc.close();
@@ -56,14 +59,12 @@ public class Biblioteka {
         String linea;
         try {
             BufferedReader breader = new BufferedReader(new FileReader(nomefile));
-
             while ((linea = breader.readLine()) != null) {
                 String[] datiLibro = linea.split(",");
                 if (datiLibro.length == 3) {
                     Book book = new Book(datiLibro[1].trim(), datiLibro[2].trim());
                     listaLibri.put(Integer.valueOf(datiLibro[0]), book);
                 } else if (datiLibro.length == 4) {
-                    //  AudioBook audioBook = new AudioBook(datiLibro[1].trim(), datiLibro[2].trim(), Integer.valueOf(datiLibro[3]));
                     listaLibri.put(Integer.valueOf(datiLibro[0]), new AudioBook(datiLibro[1].trim(), datiLibro[2].trim(), Integer.parseInt(datiLibro[3])));
                 } else {
                     System.out.println("inserimento in HashMap non è possibile");
@@ -77,7 +78,6 @@ public class Biblioteka {
         }
         return listaLibri;
     }
-
 
     //aggiungere in hashMap + in file
     public void aggiungereLibro() {
@@ -93,45 +93,48 @@ public class Biblioteka {
 
         while (flag) {
             Scanner sc = new Scanner(System.in);
-            System.out.println("Cosa voui aggiungere?");
-            System.out.println("L -> libro");
-            System.out.println("A -> audiolibro");
-            System.out.println("Altro -> tornare a menu");
-            String schelta = sc.nextLine().toUpperCase();
-            switch (schelta) {
-                case "L":
-                    System.out.println("Inserisci il titolo");
-                    String titolo = sc.nextLine();
-                    System.out.println("Inserisci il autore");
-                    String autore = sc.nextLine();
-                    //aggiungo libro in HashMap
-                    Book book = new Book(titolo, autore);
-                    listaLibri.put(++maxId, book);
-                    //rescrivo file
-                    aggiornaFile();
-                    System.out.println("Libro aggiunto con successo");
-                    break;
-                case "A":
-                    System.out.println("Inserisci il titolo");
-                    String titolo1 = sc.nextLine();
-                    System.out.println("Inserisci il autore");
-                    String autore1 = sc.nextLine();
-                    //aggiungo audiolibro in HashMap
-                    System.out.println("Inserisci la durata");
-                    int durata = Integer.parseInt(sc.nextLine());
-                    listaLibri.put(++maxId, new AudioBook(titolo1, autore1, durata));
-                    //rescrivo file
-                    aggiornaFile();
-                    System.out.println("audiolibro aggiunto con successo");
-                    break;
-                default:
-                    flag = false;
-                    break;
+            System.out.println("Cosa vuoi aggiungere?");
+            System.out.println("1 -> libro");
+            System.out.println("2 -> audiolibro");
+            System.out.println("3 -> Torna al menu");
+            try {
+                int scelta = sc.nextInt();
+                switch (scelta) {
+                    case 1:
+                        System.out.println("Inserisci il titolo");
+                        String titolo = sc.next();
+                        System.out.println("Inserisci il autore");
+                        String autore = sc.next();
+                        Book book = new Book(titolo, autore);
+                        listaLibri.put(++maxId, book);
+                        aggiornaFile();
+                        System.out.println("Libro aggiunto con successo");
+                        break;
+                    case 2:
+                        System.out.println("Inserisci il titolo");
+                        String titolo1 = sc.next();
+                        System.out.println("Inserisci il autore");
+                        String autore1 = sc.next();
+                        System.out.println("Inserisci la durata");
+                        int durata = sc.nextInt();
+                        listaLibri.put(++maxId, new AudioBook(titolo1, autore1, durata));
+                        aggiornaFile();
+                        System.out.println("Audiolibro aggiunto con successo");
+                        break;
+                    case 3:
+                        flag = false;
+                        break;
+                    default:
+                        System.out.println("Scelta errata");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Errore: inserisci un numero");
+                sc.next(); // Clear the buffer
             }
         }
 
     }
-
 
     public void cancellaLibro(Integer key) {
         Integer id = trovaLibroPerId(key);
@@ -139,8 +142,7 @@ public class Biblioteka {
             System.out.println("Non hai cancellato il libro: la chiave non trovata");
         } else {
             listaLibri.remove(id);
-            System.out.println("hai cancellato il libro con id: " + id);
-            //rescrivo il file
+            System.out.println("Hai cancellato il libro con id: " + id);
             aggiornaFile();
         }
     }
@@ -151,11 +153,11 @@ public class Biblioteka {
         for (Map.Entry<Integer, Book> entry : listaLibri.entrySet()) {
             if (entry.getKey() == id) {
                 key = id;
-                System.out.println("libro trovato -> ID: " + entry.getKey() + ", Libro: " + entry.getValue().toString());
+                System.out.println("Libro trovato -> ID: " + entry.getKey() + ", Libro: " + entry.getValue().toString());
             }
         }
         if (key == null) {
-            System.out.println("Libro non è trovato");
+            System.out.println("Libro non trovato");
         }
         return key;
     }
@@ -175,7 +177,7 @@ public class Biblioteka {
             System.out.println("Trovato:");
             for (String libro : lista) System.out.println(libro);
         } else {
-            System.out.println("Libro non è trovato");
+            System.out.println("Libro non trovato");
         }
     }
 
@@ -188,7 +190,7 @@ public class Biblioteka {
                 br.write(linea);
             }
             br.close();
-            System.out.println("il file è aggiornato");
+            System.out.println("Il file è stato aggiornato");
         } catch (IOException e) {
             System.out.println(e);
         }
@@ -200,8 +202,4 @@ public class Biblioteka {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
     }
-
-}//
-
-
-
+}
