@@ -6,8 +6,8 @@ import java.util.*;
 public class Biblioteka {
     //  private static int id;
     private HashMap<Integer, Book> listaLibri = new HashMap<>();
-    private String nomefile = "E:\\Java JOB\\NoveAprile\\src\\SettimanaDue\\biblioteka\\libriDisponibili.txt";
-  //  private String nomefile = "D:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
+    private String nomefile = "E:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
+    //  private String nomefile = "D:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
 
     public void menu() {
         Scanner sc = new Scanner(System.in);
@@ -44,7 +44,9 @@ public class Biblioteka {
                     break;
             }
         }
+        //sc.close();
     }
+
 
     //legge da file e popola HashMap
     public HashMap<Integer, Book> readFromFile() {
@@ -66,9 +68,9 @@ public class Biblioteka {
             }
             breader.close();
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e);
         }
         return listaLibri;
     }
@@ -159,10 +161,12 @@ public class Biblioteka {
 
     public void trovaLibroPerNome(String nome) {
         listaLibri = readFromFile();
-        List<String> lista = new ArrayList<>();
+        List<String> lista = null;
+
         for (Map.Entry<Integer, Book> entry : listaLibri.entrySet()) {
             String result = entry.getValue().toString().toUpperCase();
             if (result.contains(nome.toUpperCase())) {
+                lista = new ArrayList<>();
                 lista.add("ID: " + entry.getKey() + ", Libro: " + entry.getValue().toString());
             }
         }
