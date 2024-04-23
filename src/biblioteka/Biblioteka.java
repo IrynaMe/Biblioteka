@@ -6,8 +6,8 @@ import java.util.*;
 public class Biblioteka {
     //  private static int id;
     private HashMap<Integer, Book> listaLibri = new HashMap<>();
-    // private String nomefile = "E:\\Java JOB\\NoveAprile\\src\\SettimanaDue\\biblioteka\\libriDisponibili.txt";
-    private String nomefile = "D:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
+    private String nomefile = "E:\\Java JOB\\NoveAprile\\src\\SettimanaDue\\biblioteka\\libriDisponibili.txt";
+  //  private String nomefile = "D:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
 
     public void menu() {
         Scanner sc = new Scanner(System.in);
@@ -44,7 +44,6 @@ public class Biblioteka {
                     break;
             }
         }
-        sc.close();
     }
 
     //legge da file e popola HashMap
