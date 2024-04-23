@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class Biblioteka {
-    //  private static int id;
+
     private HashMap<Integer, Book> listaLibri = new HashMap<>();
     private String nomefile = "E:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
     //  private String nomefile = "D:\\Java JOB\\Biblio\\src\\biblioteka\\libriDisponibili.txt";
@@ -143,7 +143,7 @@ public class Biblioteka {
         menu();
     }
 
-    public int trovaLibroPerId(int id) {
+    public Integer trovaLibroPerId(int id) {
         listaLibri = readFromFile();
         Integer key = null;
         for (Map.Entry<Integer, Book> entry : listaLibri.entrySet()) {
