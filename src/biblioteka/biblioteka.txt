@@ -1,0 +1,13 @@
+/createmi un sistema per gestire una biblioteca. Ogni libro
+//è identificato da un ID univoco e ha un titolo e un autore
+//Obiettivo:leggere i dati dei libri contenuti
+//in un file di testo(id, nome e autore) separati da virgola
+//salvare i dati in un hashmap(ID sarà chiave e dovrete
+//creare un oggetto book che sarà il valore)
+------------------------------
+//implementare metodi per aggiunger e rimuovere i libri dal file e dall'hashmap
+
+//quindi al termine di ogni modifica bisognerà
+//modificare il file di testo con i nuovi dati
+//quindi sono da implementare la classe Book, la classe Biblioteca
+//e il main che gestisce le operazioni
