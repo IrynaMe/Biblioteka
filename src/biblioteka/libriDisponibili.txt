@@ -1,9 +1,8 @@
-3,Orgoglio e Pregiudizio,Jane Austen
-4,Il Grande Gatsby,F. Scott Fitzgerald
+3,Orgoglio e Pregiudizio,Jane Austen,200
+4,Il Grande Gatsby,F. Scott Fitzgerald,456
 5,Moby Dick,Herman Melville
-6,Guerra e Pace,Leo Tolstoy
+6,Guerra e Pace,Leo Tolstoy,400
 7,Il Giovane Holden,J.D. Salinger
-8,www,wwe
-9,xx,ccc
-10,aaaa,uuuu
-11,vvv,bbb
+8,ggg,hhh
+9,eee,rrr,pdf
+10,nnn,nnn

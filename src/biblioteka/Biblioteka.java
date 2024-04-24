@@ -65,7 +65,14 @@ public class Biblioteka {
                     Book book = new Book(datiLibro[1].trim(), datiLibro[2].trim());
                     listaLibri.put(Integer.valueOf(datiLibro[0]), book);
                 } else if (datiLibro.length == 4) {
-                    listaLibri.put(Integer.valueOf(datiLibro[0]), new AudioBook(datiLibro[1].trim(), datiLibro[2].trim(), Integer.parseInt(datiLibro[3])));
+                    //System.out.println("TEST DURATA "+datiLibro[3]);
+                    //controllo se Audiobook o ElectronicBook
+                    try {
+                        listaLibri.put(Integer.valueOf(datiLibro[0]), new AudioBook(datiLibro[1].trim(), datiLibro[2].trim(), Integer.valueOf(datiLibro[3])));
+                    } catch (NumberFormatException e) {
+                        listaLibri.put(Integer.valueOf(datiLibro[0]), new ElectronicBook(datiLibro[1].trim(), datiLibro[2].trim(), datiLibro[3]));
+                    }
+
                 } else {
                     System.out.println("Inserimento in HashMap non è possibile");
                 }
@@ -96,7 +103,8 @@ public class Biblioteka {
             System.out.println("Cosa vuoi aggiungere?");
             System.out.println("1 -> libro");
             System.out.println("2 -> audiolibro");
-            System.out.println("3 -> Torna al menu");
+            System.out.println("3 -> libro elettronico");
+            System.out.println("4 -> Torna al menu");
             try {
                 int scelta = sc.nextInt();
                 switch (scelta) {
@@ -122,6 +130,17 @@ public class Biblioteka {
                         System.out.println("Audiolibro aggiunto con successo");
                         break;
                     case 3:
+                        System.out.println("Inserisci il titolo");
+                        String titolo2= sc.next();
+                        System.out.println("Inserisci il autore");
+                        String autore2 = sc.next();
+                        System.out.println("Inserisci il format");
+                        String format=sc.next();
+                        listaLibri.put(++maxId, new ElectronicBook(titolo2, autore2, format));
+                        aggiornaFile();
+                        System.out.println("Audiolibro aggiunto con successo");
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
