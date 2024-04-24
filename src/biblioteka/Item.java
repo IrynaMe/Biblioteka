@@ -9,7 +9,7 @@ abstract class Item {
         this.autore = autore;
     }
 
-   // public abstract String getFormattedString ();
+   public abstract String getFormattedString ();
 
     @Override
     public String  toString(){

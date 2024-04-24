@@ -6,3 +6,6 @@
 8,ggg,hhh
 9,eee,rrr,pdf
 10,nnn,nnn
+11,hhh,hhh,mobi
+12,audio,libro,456
+13,libro,elettronico,epub

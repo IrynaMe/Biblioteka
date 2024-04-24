@@ -8,9 +8,10 @@ public class Book extends Item{
         super(titolo, autore);
     }
 
-  /*  @Override
+    @Override
     public String getFormattedString() {
-        return "Book: " +super.toString();
-    }*/
+        return "Book: "+super.toString();
+    }
+
 
 }
