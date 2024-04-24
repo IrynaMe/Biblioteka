@@ -1,25 +1,17 @@
 package biblioteka;
 
 
-public class Book {
+public class Book extends Item{
     private String titolo;
     private String autore;
 
     public Book(String titolo, String autore) {
-        this.titolo = titolo;
-        this.autore = autore;
-    }
-
-    public String getTitolo() {
-        return titolo;
-    }
-
-    public String getAutore() {
-        return autore;
+        super(titolo, autore);
     }
 
     @Override
-    public String toString() {
-        return titolo+","+autore;
+    public String getFormattedString() {
+        return "Book: " +super.toString();
     }
+
 }

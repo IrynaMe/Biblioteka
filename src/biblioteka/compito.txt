@@ -11,3 +11,11 @@
 //modificare il file di testo con i nuovi dati
 //quindi sono da implementare la classe Book, la classe Biblioteca
 //e il main che gestisce le operazioni
+
+
+1,Uccidete il Mockingbird,Harper Lee 002,1984,George Orwell,420
+3,Orgoglio e Pregiudizio,Jane Austen
+4,Il Grande Gatsby,F. Scott Fitzgerald
+5,Moby Dick,Herman Melville,960
+6,Guerra e Pace,Leo Tolstoy
+7,Il Giovane Holden,J.D. Salinger,300
